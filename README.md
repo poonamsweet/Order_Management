@@ -35,7 +35,7 @@ A web-based backend system for managing orders, employees, clients, and attendan
 📁 order_management/
 │
 ├── app.py                  # Main Flask app
-├── models.py               # SQLAlchemy models (provided above)
+├
 ├── send_mail.py            # Utility for sending emails
 ├── requirements.txt        # Python dependencies
 ├── README.md               # Project documentation
