@@ -74,24 +74,10 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 from sqlalchemy import create_engine
 
 
-#password = 'admin@123'
-#password = 'password'
 
-# Assuming your SQLAlchemy configuration is in app.config
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://new_user:{password}@localhost:3306/ordermodule'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost:3306/ordermodule'
 
-# this db seeting for aws deployement
-username = 'myuser'
-password = 'passsword'
-hostname = 'localhost'
-dbname = 'ordermodule'
 
-# # URL-encode the username and password
-# username_encoded = urllib.parse.quote(username)
-# password_encoded = urllib.parse.quote(password)
-
-# app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{username_encoded}:{password_encoded}@{hostname}/{dbname}'
 password = 'admin@123'
 
 # this db setting for local
@@ -99,29 +85,6 @@ password = 'admin@123'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:passsword@localhost:3306/ordermodule'
 
 
-
-# this db setting for local
-#app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://root:{password}@localhost:3306/ordermodule'
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost:3306/ordermodule'
-
-#this is local db setting
-# # URL-encode the username and password
-# password = 'Tutorshive@123'
-# username = 'admin'
-# hostname = 'localhost'
-# username_encoded = urllib.parse.quote(username)
-# password_encoded = urllib.parse.quote(password)
-# password = password_encoded
-
-
-# dbname = 'dump20241022'
-
-
-
-# app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://admin:{password}@localhost:3306/{dbname}'
-
-
-# app.app_context().push()
 db = SQLAlchemy(app)
 
 """ logging.basicConfig()
